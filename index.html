@@ -4,12 +4,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
   <title>State of the School</title>
   <meta name="description" content="State of the School">
 
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/css/global.css" rel="stylesheet">
 
 </head>
 
@@ -119,7 +121,7 @@
 
     <div class='w-full flex justify-center'>
       <a href='#newsletter'>
-        <button class='btn bg-gray-800 text-white px-3 py-2 rounded mb-16'>Book Coming Soon!</button>
+        <button class='btn bg-gray-700 hover:bg-gray-800 text-white hover:text-gray-100 transition-all duration-200 px-3 py-2 rounded mb-16'>Book Coming Soon!</button>
       </a>
     </div>
   </section>
@@ -129,7 +131,7 @@
 
     <div class='w-full flex flex-col lg:flex-row justify-center items-center lg:items-start'>
 
-      <div class='py-2 px-3 shadow-md rounded-md bg-white flex flex-col items-center mx-4 mt-4 lg:mt-0'>
+      <div style='min-width: 200px;' class='py-2 px-3 shadow-md rounded-md bg-white flex flex-col items-center mx-4 mt-4 lg:mt-0'>
         <div class='font-bold text-lg'>State of the School Book</div>
         
         <img class='shadow-md'
@@ -143,7 +145,7 @@
         </a>
       </div>
 
-      <div class='py-2 px-3 shadow-md rounded-md bg-white flex flex-col items-center mx-4 mt-4 lg:mt-0'>
+      <div style='min-width: 200px;' class='py-2 px-3 shadow-md rounded-md bg-white flex flex-col items-center mx-4 mt-4 lg:mt-0'>
         <div class='font-bold text-lg'>State of the School Notepad</div>
         
         <img class='shadow-md'
@@ -239,8 +241,8 @@
   </section>
 
   <section id='newsletter' class='my-32 flex justify-center'>
-    <div class='w-5/6 lg:w-2/3 mx-2 lg:mx-0 flex flex-col-reverse lg:flex-row justify-between rounded-lg bg-gray-100 shadow-lg'>
-      <div class='flex flex-col justify-center mx-16'>
+    <div class='w-full px-2 lg:w-2/3 mx-2 lg:mx-0 flex flex-col-reverse lg:flex-row justify-between rounded-lg lg:bg-gray-100 lg:shadow-lg'>
+      <div class='flex flex-col justify-center items-center mx-16'>
         <div class='text-xl font-bold my-2'><span>Book coming soon!</span><span></span></div>
         <div class='text-gray-600 my-2'>Sign up for our newsletter to stay updated on our upcoming book release!</div>
 
