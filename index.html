@@ -24,9 +24,10 @@
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
-          <button
+          <button id='hamburger-button'
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-expanded="false">
+            aria-expanded="false"
+            >
             <span class="sr-only">Open main menu</span>
             <!-- Icon when menu is closed. -->
             <!-- Heroicon name: menu Menu open: "hidden", Menu closed: "block" -->
@@ -87,7 +88,7 @@
     </div>
 
     <!-- Mobile menu, toggle classes based on menu state. Menu open: "block", Menu closed: "hidden" -->
-    <div class="hidden sm:hidden">
+    <div id='mobile-nav-menu' class="hidden sm:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="#book" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">State of the
@@ -277,6 +278,9 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
 <script>
+  // set page state
+  window.isMobileNavOpen = false
+
   const btn = document.getElementById('subscribe-button')
   const input = document.getElementById('subscriber-email-address')
 
@@ -300,6 +304,16 @@
           btn.value = 'Subscribe'
           alert('Please complete the reCAPTCHA before submitting.')
         })
+    })
+
+    const hamburgerBtn = document.getElementById('hamburger-button')
+
+    hamburgerBtn.addEventListener('click', e => {
+      e.preventDefault()
+      window.isMobileNavOpen = !window.isMobileNavOpen
+      const menu = document.getElementById('mobile-nav-menu')
+      menu.classList.remove('hidden', 'visible')
+      menu.classList.add(window.isMobileNavOpen ? 'visible' : 'hidden')
     })
 </script>
 
