@@ -296,7 +296,7 @@
           alert('Success! You are now subscribed to our email newsletter!\n\nYou should receive a confirmation email shortly.\n\nThank you!')
         }, (err) => {
           btn.value = 'Subscribe'
-          alert(JSON.stringify(err))
+          alert('Please complete the reCAPTCHA before submitting.')
         })
     })
 </script>
